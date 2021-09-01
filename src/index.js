@@ -1,17 +1,40 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import ReactDom from 'react-dom'
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+function App() {
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+    const style={
+        backgroundColor:"blue",
+        color:"white",
+       
+    };
+
+    const buttonText="Submit";
+    const labelText="Enter Name";
+    return (
+        <div>
+            <h3>Form</h3>
+            <label htmlFor="name" class="label-class">
+                {labelText}
+            </label>
+            <input id="name" type="text"/>
+            <hr/>
+            <ul className="list">
+                <h3>Social Networks</h3>
+                <li>Facebook</li>
+                <li>Slack</li>
+                <li>Twitter</li>
+            </ul>
+            <button style={style}>{buttonText}</button>
+
+            <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis, odit reprehenderit. Ex, nam repellendus! Fuga laudantium adipisci blanditiis corporis libero.
+            </p>
+        </div>
+ 
+ );
+    
+}
+
+    ReactDom.render(<App />,document.querySelector('#root'))
+
+
